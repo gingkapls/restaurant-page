@@ -1,21 +1,16 @@
 import "./main.css";
-import FoodItem from "./components/FoodItem";
-import OrderButton from "./components/OrderButton";
-import menu from "./menu";
+import Home from "./components/Home";
+import Menu from "./components/Menu";
 
-const content = document.querySelector(".content");
 const mainContainer = document.querySelector(".main-container");
 const navBar = document.querySelector("nav");
 
-const renderMenu = (container) => {
-  const fragment = new DocumentFragment();
-  container.replaceChildren();
-  menu.forEach((item) => {
-    fragment.appendChild(FoodItem(item));
-  });
-
-  container.appendChild(fragment);
+const renderComponent = (component) => (container) => {
+  container.replaceChildren(component());
 };
+
+const renderHome = renderComponent(Home);
+const renderMenu = renderComponent(Menu);
 
 navBar.addEventListener("click", (event) => {
   if (event.target === event.currentTarget) return;
@@ -23,7 +18,13 @@ navBar.addEventListener("click", (event) => {
   console.log(event.target.textContent);
   switch (event.target.textContent.toLowerCase()) {
     case "menu":
-      renderMenu(content);
+      renderMenu(mainContainer);
+      break;
+
+    case "home":
+      renderHome(mainContainer);
       break;
   }
 });
+
+renderHome(mainContainer);
