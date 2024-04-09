@@ -1,0 +1,138 @@
+:root {
+  --main-bg-color: #141517;
+  --image-width: 280px;
+  --gap: 40px;
+  font-size: 17px;
+}
+
+* {
+  /* outline: 1px solid red; */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--main-bg-color);
+}
+
+header {
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav button {
+  background-color: var(--main-bg-color);
+  border: none;
+  color: white;
+  line-height: 2rem;
+}
+
+#logo-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/baljinnyam-sumiyasuren-gKN5m528N6o-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 80vh;
+  width: auto;
+}
+
+.hero-image {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0;
+}
+
+.hero-text > * {
+  margin: 10px;
+}
+
+.content {
+  margin-top: var(--gap);
+  margin-bottom: calc(var(--image-width));
+  width: 65vw;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-item {
+  position: relative;
+  font-style: serif;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  margin-top: 100px;
+  overflow: visible;
+  gap: 40px;
+  /* margin-bottom: 80px; */
+  padding-bottom: 40px;
+  border-bottom: 2px solid;
+  border-radius: 4px;
+  border-image: linear-gradient(
+      to right,
+      transparent 33%,
+      grey 33% 66%,
+      transparent 33%
+    )
+    100% 1;
+}
+
+.food-item img {
+  border-radius: 6px;
+  position: absolute;
+  top: -30%;
+  width: var(--image-width);
+  height: auto;
+  aspect-ratio: 1/2;
+  object-fit: cover;
+}
+
+.food-item-desc {
+  margin-left: calc(var(--image-width) + var(--gap));
+  width: 60%;
+}
+
+.food-item:nth-child(even) .food-item-desc {
+  text-align: right;
+  margin-right: calc(var(--image-width) + var(--gap));
+}
+
+.food-item h4 {
+  font-size: 2rem;
+  font-style: serif;
+  text-transform: uppercase;
+}
+
+.food-item:nth-child(even) img {
+  right: 0;
+}
