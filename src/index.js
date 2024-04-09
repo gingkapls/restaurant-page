@@ -1,6 +1,7 @@
 import "./main.css";
 import Home from "./components/Home";
 import Menu from "./components/Menu";
+import Locations from "./components/Locations";
 
 const content = document.querySelector(".content");
 const navBar = document.querySelector("nav");
@@ -11,6 +12,7 @@ const renderComponent = (component) => (container) => {
 
 const renderHome = renderComponent(Home);
 const renderMenu = renderComponent(Menu);
+const renderLocations = renderComponent(Locations);
 
 navBar.addEventListener("click", (event) => {
   if (event.target === event.currentTarget) return;
@@ -24,7 +26,11 @@ navBar.addEventListener("click", (event) => {
     case "home":
       renderHome(content);
       break;
+
+    case "locations":
+      renderLocations(content);
+      break;
   }
 });
 
-renderHome(content);
+// renderHome(content);
