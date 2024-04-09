@@ -2,7 +2,7 @@ import "./main.css";
 import Home from "./components/Home";
 import Menu from "./components/Menu";
 
-const mainContainer = document.querySelector(".main-container");
+const content = document.querySelector(".content");
 const navBar = document.querySelector("nav");
 
 const renderComponent = (component) => (container) => {
@@ -18,13 +18,13 @@ navBar.addEventListener("click", (event) => {
   console.log(event.target.textContent);
   switch (event.target.textContent.toLowerCase()) {
     case "menu":
-      renderMenu(mainContainer);
+      renderMenu(content);
       break;
 
     case "home":
-      renderHome(mainContainer);
+      renderHome(content);
       break;
   }
 });
 
-renderHome(mainContainer);
+renderHome(content);

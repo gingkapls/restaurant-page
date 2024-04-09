@@ -2,13 +2,13 @@ import menuData from "../menuData";
 import FoodItem from "./FoodItem";
 
 const Menu = () => {
-  const content = document.createElement("div");
-  content.classList.add("content");
+  const menuContainer = document.createElement("div");
+  menuContainer.classList.add("menu-container");
   menuData.forEach((item) => {
-    content.appendChild(FoodItem(item));
+    menuContainer.appendChild(FoodItem(item));
   });
 
-  return content;
+  return menuContainer;
 };
 
 export default Menu;
