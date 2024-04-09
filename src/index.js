@@ -7,6 +7,7 @@ const content = document.querySelector(".content");
 const navBar = document.querySelector("nav");
 
 const renderComponent = (component) => (container) => {
+  window.scrollTo(0, 0);
   container.replaceChildren(component());
 };
 
@@ -33,4 +34,4 @@ navBar.addEventListener("click", (event) => {
   }
 });
 
-// renderHome(content);
+renderHome(content);

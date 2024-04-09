@@ -1,4 +1,4 @@
-import map from "../assets/map2.png";
+import map from "../assets/map1.png";
 
 const Locations = () => {
   const div = document.createElement("div");
