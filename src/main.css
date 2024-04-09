@@ -15,7 +15,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-
   background-color: var(--main-bg-color);
 }
 
@@ -85,7 +84,6 @@ nav button {
 
 .food-item {
   position: relative;
-  font-style: serif;
   display: flex;
   width: 100%;
   justify-content: flex-start;
@@ -122,6 +120,10 @@ nav button {
   width: 60%;
 }
 
+.food-item-desc quote {
+  font-family: sans-serif;
+}
+
 .food-item:nth-child(even) .food-item-desc {
   text-align: right;
   margin-right: calc(var(--image-width) + var(--gap));
@@ -129,10 +131,15 @@ nav button {
 
 .food-item h4 {
   font-size: 2rem;
-  font-style: serif;
+  font-family: serif;
   text-transform: uppercase;
 }
 
 .food-item:nth-child(even) img {
   right: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
 }

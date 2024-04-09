@@ -1,6 +1,6 @@
 const menu = [
   {
-    title: "Dish 1",
+    title: "Nikuman",
     imgSrc: require("./assets/cody-chan-FdvHxVWHhzA-unsplash.jpg"),
     imgAlt: "text",
     description:
