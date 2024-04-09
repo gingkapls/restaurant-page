@@ -35,7 +35,6 @@ header {
   position: fixed;
   color: white;
   z-index: 2;
-  margin-bottom: var(--gap);
 }
 
 nav {
@@ -208,8 +207,7 @@ nav button:hover {
 
 footer {
   display: flex;
-  flex-direction: column;
-  margin-top: 200px;
+  margin-top: calc(var(--gap) * 2);
   margin-left: var(--gap);
   color: white;
 }
